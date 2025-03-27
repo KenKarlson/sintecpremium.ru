@@ -26,7 +26,6 @@ export default {};
 .header {
   padding-top: 35px;
   padding-bottom: 166px;
-  background-color: #333;
   background: url("../assets/img/header_bg.png") center center/cover;
 }
 .header__container {

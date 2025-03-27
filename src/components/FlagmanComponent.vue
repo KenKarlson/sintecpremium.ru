@@ -8,7 +8,9 @@
       <p class="flagman__description">
         В рецептурах используются исключительно современные импортные пакеты
         присадок и комплекс высококачественных, полностью синтетических базовых
-        масел — HC, PAO, AN.
+        масел — <span class="flagman__highlight">HC</span>,
+        <span class="flagman__highlight">PAO</span>,
+        <span class="flagman__highlight">AN</span>.
       </p>
     </div>
   </section>
@@ -40,40 +42,67 @@ export default {
     letter-spacing: -0.02em; /* -2% */
     font-weight: 400; /* Regular */
     color: #000;
-    margin: 0 0 30px 0;
+    margin: 0 0 40px 0;
     max-width: 900px;
   }
 
   &__title-accent {
-    color: #b89655; /* Золотой цвет для PREMIUM 9000 */
-    font-weight: 400; /* Сохраняем Regular */
+    color: #b89655;
+    font-weight: 400;
   }
 
   &__description {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
-    max-width: 700px;
+    font-size: 32px;
+    line-height: 1.3; /* 130% */
+    letter-spacing: -0.02em; /* -2% */
+    font-weight: 400; /* Regular */
+    color: #5a5a5a; /* grey_dark */
+    max-width: 900px;
     margin: 0;
   }
 
-  /* Адаптация для мобильных устройств */
-  @media (max-width: 768px) {
-    padding: 50px 15px;
+  &__highlight {
+    color: #ff0000; /* red */
+    font-weight: 400;
+  }
+
+  /* Адаптация для планшетов */
+  @media (max-width: 1024px) {
+    padding: 60px 20px;
 
     &__title {
-      font-size: 32px;
-      margin-bottom: 20px;
+      font-size: 38px;
+      margin-bottom: 30px;
     }
 
     &__description {
-      font-size: 16px;
+      font-size: 28px;
     }
   }
 
+  /* Адаптация для мобильных */
+  @media (max-width: 768px) {
+    padding: 40px 15px;
+
+    &__title {
+      font-size: 32px;
+      margin-bottom: 25px;
+    }
+
+    &__description {
+      font-size: 22px;
+      line-height: 1.4;
+    }
+  }
+
+  /* Маленькие мобильные */
   @media (max-width: 480px) {
     &__title {
       font-size: 28px;
+    }
+
+    &__description {
+      font-size: 18px;
     }
   }
 }

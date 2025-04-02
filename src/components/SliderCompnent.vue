@@ -14,9 +14,9 @@
         <!-- Добавляем пагинацию (точки) 
         <div class="swiper-pagination" slot="pagination"></div>-->
 
-        <!-- Добавляем кнопки навигации (стрелки) -->
+        <!-- Добавляем кнопки навигации (стрелки) 
         <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>
+        <div class="swiper-button-next" slot="button-next"></div>-->
       </swiper>
     </div>
   </div>
@@ -84,14 +84,14 @@ export default {
 }
 .swiper-slide {
   padding-top: 40px;
-  /*width: 427px !important;  Фиксированная ширина */
+  width: 416px !important; /* Фиксированная ширина */
   /* Или */
   max-width: 100%; /* Для адаптивности */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  flex-shrink: 0;
+  flex-shrink: 0; /* ну хз*/
   background-color: #eff1f3;
   border: 2px solid #e3e3e3;
   color: black;

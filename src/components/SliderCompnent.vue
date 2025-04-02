@@ -10,8 +10,8 @@
           />
         </swiper-slide>
 
-        <!-- Добавляем пагинацию (точки) -->
-        <div class="swiper-pagination" slot="pagination"></div>
+        <!-- Добавляем пагинацию (точки) 
+        <div class="swiper-pagination" slot="pagination"></div>-->
 
         <!-- Добавляем кнопки навигации (стрелки) -->
         <div class="swiper-button-prev" slot="button-prev"></div>
@@ -26,23 +26,39 @@ export default {
   data() {
     return {
       slides: [
-        { id: 0, image: "slider1.jpg" },
-        { id: 1, image: "slider2.jpg" },
-        { id: 2, image: "slider3.jpg" },
+        { id: 0, image: "slider1.png", text: "11111" },
+        { id: 1, image: "slider2.png", text: "11111" },
+        { id: 2, image: "slider3.png", text: "11111" },
+        { id: 3, image: "slider3.png", text: "11111" },
+        { id: 4, image: "slider3.png", text: "11111" },
+        { id: 5, image: "slider3.png", text: "11111" },
       ],
       swiperOptions: {
         pagination: {
           el: ".swiper-pagination",
-          clickable: true,
+          clickable: false,
         },
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
-        loop: true, // Бесконечная прокрутка
-        autoplay: {
-          delay: 3000, // Автопрокрутка каждые 3 секунды
-          disableOnInteraction: false,
+        loop: false, // Бесконечная прокрутка
+        //autoplay: {
+        //  delay: 3000, // Автопрокрутка каждые 3 секунды
+        //  disableOnInteraction: false,
+        //},
+        spaceBetween: 10,
+        slidesPerView: "auto", // или число (например, 3)
+        slidesOffsetBefore: 0, // убирает отступ в начале
+        slidesOffsetAfter: 0, // убирает отступ в конце
+        breakpoints: {
+          // Адаптивные настройки
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
         },
       },
     };
@@ -57,11 +73,25 @@ export default {
   padding: 20px 0;
 }
 .slider-container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
+  overflow: hidden;
 }
 .slide-image {
   width: 200px;
   height: auto;
+}
+.swiper-slide {
+  width: 427px !important; /* Фиксированная ширина */
+  /* Или */
+  max-width: 100%; /* Для адаптивности */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-shrink: 0;
+  background-color: #eff1f3;
+  border: 2px solid #e3e3e3;
+  border-radius: 8px;
 }
 </style>

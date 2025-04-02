@@ -76,4 +76,5 @@ export default {};
   color: #fff;
   cursor: pointer;
 }
+/*делее Исправить по БЭМ + добавить канистру и декор сни зу */
 </style>

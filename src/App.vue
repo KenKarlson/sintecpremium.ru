@@ -2,6 +2,8 @@
   <div id="app">
     <HeaderComponent />
     <FlagmanComponent />
+    <TechComponent />
+    <SliderCompnent />
     <FooterComponent />
   </div>
 </template>
@@ -10,9 +12,17 @@
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 import FlagmanComponent from "@/components/FlagmanComponent.vue";
+import TechComponent from "@/components/TechComponent.vue";
+import SliderCompnent from "@/components/SliderCompnent.vue";
 export default {
   name: "App",
-  components: { HeaderComponent, FlagmanComponent, FooterComponent },
+  components: {
+    HeaderComponent,
+    FlagmanComponent,
+    FooterComponent,
+    TechComponent,
+    SliderCompnent,
+  },
 };
 </script>
 

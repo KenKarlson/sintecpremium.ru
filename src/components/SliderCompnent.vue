@@ -8,6 +8,7 @@
             :alt="'Slide ' + index"
             class="slide-image"
           />
+          <h3>Premium 9000 0W-30A5/B5, SP</h3>
         </swiper-slide>
 
         <!-- Добавляем пагинацию (точки) 
@@ -82,7 +83,8 @@ export default {
   height: auto;
 }
 .swiper-slide {
-  width: 427px !important; /* Фиксированная ширина */
+  padding-top: 40px;
+  /*width: 427px !important;  Фиксированная ширина */
   /* Или */
   max-width: 100%; /* Для адаптивности */
   display: flex;
@@ -92,6 +94,7 @@ export default {
   flex-shrink: 0;
   background-color: #eff1f3;
   border: 2px solid #e3e3e3;
+  color: black;
   border-radius: 8px;
 }
 </style>

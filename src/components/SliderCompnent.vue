@@ -16,8 +16,8 @@
             </div>
             <div class="cardbox__subtitle">A5/B5, SP</div>
             <div class="cardbox__buttons">
-              <div class="btn">Button 1</div>
-              <div class="btn">Button 2</div>
+              <div class="btn btn_active">Официальныйдопуск MERCEDES-BENZ 229.6</div>
+              <div class="btn">Соответствия и одобрения автопроизводителей</div>
             </div>
           </div>
         </swiper-slide>
@@ -77,61 +77,89 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .slider {
   width: 100%;
   margin: 0;
   padding: 20px 0;
 }
+
 .slider-container {
-  max-width: 1200px;
+  max-width: 1320px;
   margin: 0 auto;
   overflow: hidden;
 }
+
 .slide-image {
   width: 200px;
   height: auto;
 }
+
 .swiper-slide {
   padding-top: 40px;
-  width: 416px !important; /* Фиксированная ширина */
+  width: 427px !important; /* Фиксированная ширина */
   /* Или */
   max-width: 100%; /* Для адаптивности */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  flex-shrink: 0; /* ну хз*/
+  flex-shrink: 0;
   background-color: #eff1f3;
   border: 2px solid #e3e3e3;
   color: black;
   border-radius: 8px;
 }
-.cardbox{
+
+.cardbox {
   margin: 0;
-  padding: 0;
+  padding: 20px;
+  width: 427px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  font-family: Gotham Pro;
+  font-family: Gotham Pro Medium;
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 120%;
-}
-.cardbox__title{
-  margin: 0;
-  padding: 0;
-  letter-spacing: 0%;
-  text-transform: uppercase;
-  & h3{
+
+  &__title {
     margin: 0;
     padding: 0;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+
+    h3 {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__subtitle {
+    color: #828080;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .btn {
+      width: 194px;
+      margin: 0 0 30px 0;
+      padding: 10px 20px;
+      font-family: Gotham Pro;
+      font-size: 14px;
+      line-height: 1.2;
+      border: 1px solid red;
+      border-radius: 8px;
+      text-align: center;
+
+      &_active {
+        background-color: red;
+        color: #eff1f3;
+      }
+    }
   }
 }
-.cardbox__subtitle{
-  color: #828080;
-}
-
-
-
 </style>

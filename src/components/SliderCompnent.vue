@@ -3,18 +3,29 @@
     <div class="slider-container">
       <swiper :options="swiperOptions">
         <swiper-slide v-for="(slide, id) in slides" :key="id">
-          <img
-            :src="require(`@/assets/img/sliderimg/${slide.image}`)"
-            :alt="'Slide ' + index"
-            class="slide-image"
-          />
-          <h3>Premium 9000 0W-30A5/B5, SP</h3>
+          <div class="cardbox">
+            <div class="cardbox__image">
+              <img
+                :src="require(`@/assets/img/sliderimg/${slide.image}`)"
+                :alt="'Slide ' + index"
+                class="slide-image"
+              />
+            </div>
+            <div class="cardbox__title">
+              <h3>Premium 9000 0W-30</h3>
+            </div>
+            <div class="cardbox__subtitle">A5/B5, SP</div>
+            <div class="cardbox__buttons">
+              <div class="btn">Button 1</div>
+              <div class="btn">Button 2</div>
+            </div>
+          </div>
         </swiper-slide>
 
-        <!-- Добавляем пагинацию (точки) 
+        <!-- Добавляем пагинацию (точки)
         <div class="swiper-pagination" slot="pagination"></div>-->
 
-        <!-- Добавляем кнопки навигации (стрелки) 
+        <!-- Добавляем кнопки навигации (стрелки)
         <div class="swiper-button-prev" slot="button-prev"></div>
         <div class="swiper-button-next" slot="button-next"></div>-->
       </swiper>
@@ -69,7 +80,6 @@ export default {
 <style scoped>
 .slider {
   width: 100%;
-  height: 400px;
   margin: 0;
   padding: 20px 0;
 }
@@ -97,4 +107,31 @@ export default {
   color: black;
   border-radius: 8px;
 }
+.cardbox{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: Gotham Pro;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 120%;
+}
+.cardbox__title{
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  & h3{
+    margin: 0;
+    padding: 0;
+  }
+}
+.cardbox__subtitle{
+  color: #828080;
+}
+
+
+
 </style>

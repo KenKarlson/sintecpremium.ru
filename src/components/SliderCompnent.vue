@@ -1,7 +1,7 @@
 <template>
   <div class="slider">
-  
-    <div class="slider-container"><h3 class="slider-title">ассортимент линейки premium</h3>
+    <div class="slider-container">
+      <h3 class="slider-title">ассортимент линейки premium</h3>
       <swiper :options="swiperOptions">
         <swiper-slide v-for="(slide, id) in slides" :key="id">
           <div class="cardbox">
@@ -17,7 +17,9 @@
             </div>
             <div class="cardbox__subtitle">A5/B5, SP</div>
             <div class="cardbox__buttons">
-              <div class="btn btn_active">Официальныйдопуск MERCEDES-BENZ 229.6</div>
+              <div class="btn btn_active">
+                Официальныйдопуск MERCEDES-BENZ 229.6
+              </div>
               <div class="btn">Соответствия и одобрения автопроизводителей</div>
             </div>
           </div>
@@ -84,13 +86,13 @@ export default {
   margin: 0;
   padding: 20px 0;
 }
-.slider-title{
+.slider-title {
   margin: 0;
   margin-bottom: 30px;
   font-family: Gotham Pro Medium;
   font-size: 50px;
   line-height: 1.2;
-  color:black;
+  color: black;
   text-transform: uppercase;
 }
 
@@ -164,6 +166,10 @@ export default {
       border: 1px solid red;
       border-radius: 8px;
       text-align: center;
+
+      &:not(:last-child) {
+        margin-right: 10px; 
+      }
 
       &_active {
         background-color: red;

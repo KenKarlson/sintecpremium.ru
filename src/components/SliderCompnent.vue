@@ -1,6 +1,7 @@
 <template>
   <div class="slider">
-    <div class="slider-container">
+  
+    <div class="slider-container"><h3 class="slider-title">ассортимент линейки premium</h3>
       <swiper :options="swiperOptions">
         <swiper-slide v-for="(slide, id) in slides" :key="id">
           <div class="cardbox">
@@ -82,6 +83,15 @@ export default {
   width: 100%;
   margin: 0;
   padding: 20px 0;
+}
+.slider-title{
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: Gotham Pro Medium;
+  font-size: 50px;
+  line-height: 1.2;
+  color:black;
+  text-transform: uppercase;
 }
 
 .slider-container {

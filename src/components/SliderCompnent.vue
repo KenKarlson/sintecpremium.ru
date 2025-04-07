@@ -16,21 +16,34 @@
               <h3>{{ slide.text_title }}</h3>
             </div>
             <div class="cardbox__subtitle">{{ slide.text_subtitle }}</div>
+
             <div class="cardbox__buttons">
-              <div class="btn btn_active">
-                Официальныйдопуск MERCEDES-BENZ 229.6
+              <div
+                class="btn btn_active"
+                v-if="shouldShowActiveButton(slide.text_btn_active)"
+              >
+                {{ slide.text_btn_active }}
               </div>
-              <div class="btn">Соответствия и одобрения автопроизводителей</div>
+              <div
+                class="btn"
+                :style="{
+                  width: shouldShowActiveButton(slide.text_btn_active)
+                    ? '194px'
+                    : '100%',
+                }"
+              >
+                {{ slide.text_btn }}
+              </div>
             </div>
+
+            <!-- <div class="cardbox__buttons">
+              <div class="btn btn_active" v-if="slide.text_btn_active && slide.text_btn_active.trim() !== ''">
+                {{ slide.text_btn_active }}
+              </div>
+              <div class="btn">{{ slide.text_btn }}</div>
+            </div> -->
           </div>
         </swiper-slide>
-
-        <!-- Добавляем пагинацию (точки)
-        <div class="swiper-pagination" slot="pagination"></div>-->
-
-        <!-- Добавляем кнопки навигации (стрелки)
-        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>-->
       </swiper>
     </div>
   </div>
@@ -46,12 +59,49 @@ export default {
           image: "slider1.png",
           text_title: "Premium 9000 0W-30",
           text_subtitle: "A5/B5, SP",
+          text_btn: "Соответствия и одобрения автопроизводителей",
+          text_btn_active: "Официальный допуск MERCEDES-BENZ 229.6",
         },
-        { id: 1, image: "slider2.png", text_title: "11111", text_subtitle: "" },
-        { id: 2, image: "slider3.png", text_title: "11111", text_subtitle: "" },
-        { id: 3, image: "slider3.png", text_title: "11111", text_subtitle: "" },
-        { id: 4, image: "slider3.png", text_title: "11111", text_subtitle: "" },
-        { id: 5, image: "slider3.png", text_title: "11111", text_subtitle: "" },
+        {
+          id: 1,
+          image: "slider2.png",
+          text_title: "Premium 9000 5W-30",
+          text_subtitle: "C3, SN",
+          text_btn: "Соответствия и одобрения автопроизводителей",
+          text_btn_active: "Официальный допуск MERCEDES-BENZ 229.6",
+        },
+        {
+          id: 2,
+          image: "slider3.png",
+          text_title: "PREMIUM 9000 0W-40",
+          text_subtitle: "A3/B4 SP/CF",
+          text_btn: "Соответствия и одобрения автопроизводителей",
+          text_btn_active: "",
+        },
+        {
+          id: 3,
+          image: "slider3.png",
+          text_title: "Premium 9000 5W-30",
+          text_subtitle: "A3/B4, SL/CF",
+          text_btn: "Соответствия и одобрения автопроизводителей",
+          text_btn_active: "",
+        },
+        {
+          id: 4,
+          image: "slider3.png",
+          text_title: "Premium 9000 5W-30",
+          text_subtitle: "A5/B5, SL/CF",
+          text_btn: "Соответствия и одобрения автопроизводителей",
+          text_btn_active: "",
+        },
+        {
+          id: 5,
+          image: "slider3.png",
+          text_title: "Premium 9000 5W-40",
+          text_subtitle: "A3/B4, SN/CF",
+          text_btn: "Соответствия и одобрения автопроизводителей",
+          text_btn_active: "",
+        },
       ],
       swiperOptions: {
         pagination: {
@@ -83,6 +133,11 @@ export default {
       },
     };
   },
+  methods: {
+    shouldShowActiveButton(text) {
+      return text && text.trim() !== "";
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -93,7 +148,6 @@ export default {
 }
 .slider-title {
   margin: 0;
-  margin-bottom: 30px;
   font-family: Gotham Pro Medium;
   font-size: 50px;
   line-height: 1.2;
@@ -108,6 +162,7 @@ export default {
 }
 
 .slide-image {
+  margin-right: 30px;
   width: 200px;
   height: auto;
 }
@@ -163,17 +218,21 @@ export default {
 
     .btn {
       width: 194px;
+      height: 76px;
       margin: 0 0 30px 0;
-      padding: 10px 20px;
+      padding: 20px 6px;
+      display: flex;
+      align-items: center;
       font-family: Gotham Pro;
       font-size: 14px;
       line-height: 1.2;
       border: 1px solid red;
       border-radius: 8px;
       text-align: center;
+      cursor: pointer;
 
       &:not(:last-child) {
-        margin-right: 10px; 
+        margin-right: 10px;
       }
 
       &_active {

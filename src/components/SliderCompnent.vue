@@ -8,14 +8,14 @@
             <div class="cardbox__image">
               <img
                 :src="require(`@/assets/img/sliderimg/${slide.image}`)"
-                :alt="'Slide ' + index"
+                :alt="'Slide ' + slide.id"
                 class="slide-image"
               />
             </div>
             <div class="cardbox__title">
-              <h3>Premium 9000 0W-30</h3>
+              <h3>{{ slide.text_title }}</h3>
             </div>
-            <div class="cardbox__subtitle">A5/B5, SP</div>
+            <div class="cardbox__subtitle">{{ slide.text_subtitle }}</div>
             <div class="cardbox__buttons">
               <div class="btn btn_active">
                 Официальныйдопуск MERCEDES-BENZ 229.6
@@ -41,12 +41,17 @@ export default {
   data() {
     return {
       slides: [
-        { id: 0, image: "slider1.png", text: "11111" },
-        { id: 1, image: "slider2.png", text: "11111" },
-        { id: 2, image: "slider3.png", text: "11111" },
-        { id: 3, image: "slider3.png", text: "11111" },
-        { id: 4, image: "slider3.png", text: "11111" },
-        { id: 5, image: "slider3.png", text: "11111" },
+        {
+          id: 0,
+          image: "slider1.png",
+          text_title: "Premium 9000 0W-30",
+          text_subtitle: "A5/B5, SP",
+        },
+        { id: 1, image: "slider2.png", text_title: "11111", text_subtitle: "" },
+        { id: 2, image: "slider3.png", text_title: "11111", text_subtitle: "" },
+        { id: 3, image: "slider3.png", text_title: "11111", text_subtitle: "" },
+        { id: 4, image: "slider3.png", text_title: "11111", text_subtitle: "" },
+        { id: 5, image: "slider3.png", text_title: "11111", text_subtitle: "" },
       ],
       swiperOptions: {
         pagination: {

@@ -29,7 +29,7 @@
                 :style="{
                   width: shouldShowActiveButton(slide.text_btn_active)
                     ? '194px'
-                    : '100%',
+                    : '100%',//тыдыщ, и на всю ширину + надо добавить отступы между слайдами не 10px, а 18px.
                 }"
               >
                 {{ slide.text_btn }}

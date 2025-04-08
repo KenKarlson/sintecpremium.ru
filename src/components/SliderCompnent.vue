@@ -29,7 +29,7 @@
                 :style="{
                   width: shouldShowActiveButton(slide.text_btn_active)
                     ? '194px'
-                    : '100%',//тыдыщ, и на всю ширину + надо добавить отступы между слайдами не 10px, а 18px.
+                    : '100%',//тыдыщ, и на всю ширину + надо добавить отступы между слайдами не 10px, а 18px.jkmm m                                                                                                                                                                                                                                     yealink
                 }"
               >
                 {{ slide.text_btn }}
@@ -226,7 +226,7 @@ export default {
       font-family: Gotham Pro;
       font-size: 14px;
       line-height: 1.2;
-      border: 1px solid red;
+      border: 2px solid red;
       border-radius: 8px;
       text-align: center;
       cursor: pointer;

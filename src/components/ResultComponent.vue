@@ -15,9 +15,13 @@
             <div class="result__item-box">
               <div class="text-wrapper">{{ item.number }}</div>
               <div class="overlap-wrapper">
-                {{ item.text }}
+                <div class="overlap-wrapper-title">
+                  {{ item.text }}
+                </div>
                 <p>Результат:</p>
-                {{ item.description }}
+                <div class="overlap-wrapper-subtitle">
+                  {{ item.description }}
+                </div>
               </div>
             </div>
           </li>
@@ -55,10 +59,12 @@ export default {
     };
   },
 };
+//Доделать скрипт со стилями завтра наверное
 </script>
 
 <style lang="scss" scoped>
 .result {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   color: black;
@@ -71,7 +77,7 @@ export default {
   }
 
   &__head {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.5rem; //
   }
 
   &__title {
@@ -104,17 +110,43 @@ export default {
     font-weight: 400;
     line-height: 1.2;
     background: #fff;
-    padding: 1.5rem 2.5rem;
-    border-top: 2px solid grey;
+    padding: 0;
+    /*padding: 1.5rem 2.5rem;*/
+    /*border-top: 2px solid grey;*/
     color: grey;
   }
 }
-.result__item-box{
+.result__item-box {
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.overlap-wrapper{
-  font-size: 22px;
+.text-wrapper{
+  width:50%;
+  padding: 20px;
+  border-top: 2px solid grey;
+}
+.overlap-wrapper {
+  width: 80%;
+  margin: 0;
+  padding: 20px;
+  background-color: rgb(239, 241, 243 , 1);
+  border-radius: 10px;
+  &-title {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: rgb(40, 40, 40)
+  }
+  &-subtitle {
+    font-size: 16px;
+    line-height: 19.2px;
+    letter-spacing: normal;
+    color: greydark;
+  }
+  & p{
+    font-size: 16px;
+    color: rgb(40, 40, 40)
+  }
 }
 </style>

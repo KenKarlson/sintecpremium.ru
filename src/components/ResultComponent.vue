@@ -125,7 +125,7 @@ export default {
 .text-wrapper{
   width:50%;
   padding: 20px;
-  border-top: 2px solid grey;
+  border-top: 1px solid grey;
 }
 .overlap-wrapper {
   width: 80%;
@@ -134,6 +134,7 @@ export default {
   background-color: rgb(239, 241, 243 , 1);
   border-radius: 10px;
   &-title {
+    margin-bottom: 30px;
     font-size: 22px;
     text-transform: uppercase;
     color: rgb(40, 40, 40)

@@ -12,7 +12,14 @@
             v-for="(item, index) in results"
             :key="index"
           >
-            {{ item.text }}
+            <div class="result__item-box">
+              <div class="text-wrapper">{{ item.number }}</div>
+              <div class="overlap-wrapper">
+                {{ item.text }}
+                <p>Результат:</p>
+                {{ item.description }}
+              </div>
+            </div>
           </li>
         </ul>
       </div>
@@ -26,7 +33,25 @@ export default {
   data() {
     return {
       subtitle: "",
-      results: [{ text: "01" }, { text: "02" }, { text: "03" }],
+      results: [
+        {
+          number: "01",
+          text: "На такси",
+          description:
+            "Высокие свойства проб масла на всем периоде эксплуатации",
+        },
+        {
+          number: "02",
+          text: " На китайских авто",
+          description:
+            "Высокие свойства проб масла на всем периоде эксплуатации",
+        },
+        {
+          number: "03",
+          text: "От независимых экспертов OIL.CLUB",
+          description: "Все показатели в норме",
+        },
+      ],
     };
   },
 };
@@ -47,7 +72,6 @@ export default {
 
   &__head {
     margin-bottom: 2.5rem;
-
   }
 
   &__title {
@@ -84,5 +108,13 @@ export default {
     border-top: 2px solid grey;
     color: grey;
   }
+}
+.result__item-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.overlap-wrapper{
+  font-size: 22px;
 }
 </style>

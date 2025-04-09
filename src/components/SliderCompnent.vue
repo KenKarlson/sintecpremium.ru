@@ -1,7 +1,9 @@
 <template>
   <div class="slider">
-    <div class="slider-container">
-      <h3 class="slider-title">ассортимент линейки premium</h3>
+    <div class="slider__container">
+      <div class="slider__head">
+        <span class="slider__title">ассортимент линейки premium</span>
+      </div>
       <swiper :options="swiperOptions">
         <swiper-slide v-for="(slide, id) in slides" :key="id">
           <div class="cardbox">
@@ -29,7 +31,7 @@
                 :style="{
                   width: shouldShowActiveButton(slide.text_btn_active)
                     ? '194px'
-                    : '100%',//тыдыщ, и на всю ширину + надо добавить отступы между слайдами не 10px, а 18px.jkmm m                                                                                                                                                                                                                                     yealink
+                    : '100%', //тыдыщ, и на всю ширину + надо добавить отступы между слайдами не 10px, а 18px.jkmm m                                                                                                                                                                                                                                     yealink
                 }"
               >
                 {{ slide.text_btn }}
@@ -142,23 +144,26 @@ export default {
 </script>
 <style lang="scss" scoped>
 .slider {
+  color: black;
   width: 100%;
   margin: 0;
   padding: 20px 0;
 }
-.slider-title {
-  margin: 0;
-  font-family: Gotham Pro Medium;
-  font-size: 50px;
-  line-height: 1.2;
-  color: black;
-  text-transform: uppercase;
-}
-
-.slider-container {
+.slider__container {
   max-width: 1320px;
   margin: 0 auto;
   overflow: hidden;
+}
+.slider__head {
+  margin-bottom: 2.5rem;
+}
+.slider__title {
+  margin: 0;
+  font-size: 50px;
+  opacity: 1;
+  translate: 0 0;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .slide-image {

@@ -1,3 +1,4 @@
+<!------>
 <template>
   <section class="tech">
     <div class="tech__backgrounds">

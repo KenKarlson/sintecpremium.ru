@@ -137,7 +137,7 @@ export default {
   justify-content: space-between;
   flex-direction: column;
   width: 80%;
-  height: 162px; //Это временно!!
+  height: 152px; //Это временно!!
   margin: 0;
   padding: 20px;
   background-color: rgb(239, 241, 243, 1);

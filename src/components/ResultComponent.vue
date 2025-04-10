@@ -18,9 +18,16 @@
                 <div class="overlap-wrapper-title">
                   {{ item.text }}
                 </div>
-                <p>Результат:</p>
-                <div class="overlap-wrapper-subtitle">
-                  {{ item.description }}
+                <div class="overlap-wrapper-frame">
+                  <div class="overlap-wrapper-frame__txt">
+                    <p>Результат:</p>
+                    <div class="overlap-wrapper-subtitle">
+                      {{ item.description }}
+                    </div>
+                  </div>
+                  <div class="overlap-wrapper-frame__btn">
+                    <div class="button button-desk">Результат теста</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -122,8 +129,8 @@ export default {
   align-items: center;
   justify-content: space-between;
 }
-.text-wrapper{
-  width:50%;
+.text-wrapper {
+  width: 50%;
   padding: 20px;
   border-top: 1px solid grey;
 }
@@ -131,13 +138,13 @@ export default {
   width: 80%;
   margin: 0;
   padding: 20px;
-  background-color: rgb(239, 241, 243 , 1);
+  background-color: rgb(239, 241, 243, 1);
   border-radius: 10px;
   &-title {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 22px;
     text-transform: uppercase;
-    color: rgb(40, 40, 40)
+    color: rgb(40, 40, 40);
   }
   &-subtitle {
     font-size: 16px;
@@ -145,9 +152,46 @@ export default {
     letter-spacing: normal;
     color: greydark;
   }
-  & p{
+  & p {
     font-size: 16px;
-    color: rgb(40, 40, 40)
+    color: rgb(40, 40, 40);
   }
+}
+.overlap-wrapper-frame{
+  display: flex;
+  align-items: flex-end;
+  align-self: stretch;
+  width: 100%;
+  gap: 20px;
+  flex: 0 0 auto;
+  &__txt{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    flex: 1 1 0%;
+    & p{
+      margin: 0;
+    }
+  }
+  &__btn{
+    display: flex;
+    width: 225px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    padding: 8px 20px;
+    border-radius: 8px;
+    color:#fff;
+    cursor: pointer;
+  }
+}
+.button-desk{
+  width: fit-content;
+  font-size: 14px;
+  line-height: 16.8px;
+  white-space: nowrap;
+  cursor: pointer;
 }
 </style>

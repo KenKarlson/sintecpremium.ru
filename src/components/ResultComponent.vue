@@ -75,16 +75,16 @@ export default {
   margin: 0;
   padding: 0;
   color: black;
-  background: #fff; // Добавлен фон для ясности
+  background: #fff;
 
   &__container {
     margin: 0 auto;
-    padding: 8.75rem 1.25rem 4.375rem; // Добавлены боковые отступы
+    padding: 8.75rem 1.25rem 4.375rem;
     max-width: 82.5rem;
   }
 
   &__head {
-    margin-bottom: 2.5rem; //
+    margin-bottom: 2.5rem;
   }
 
   &__title {
@@ -118,8 +118,6 @@ export default {
     line-height: 1.2;
     background: #fff;
     padding: 0;
-    /*padding: 1.5rem 2.5rem;*/
-    /*border-top: 2px solid grey;*/
     color: grey;
   }
 }
@@ -135,13 +133,17 @@ export default {
   border-top: 1px solid grey;
 }
 .overlap-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   width: 80%;
+  height: 162px; //Это временно!!
   margin: 0;
   padding: 20px;
   background-color: rgb(239, 241, 243, 1);
   border-radius: 10px;
   &-title {
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
     font-size: 22px;
     text-transform: uppercase;
     color: rgb(40, 40, 40);
@@ -150,7 +152,7 @@ export default {
     font-size: 16px;
     line-height: 19.2px;
     letter-spacing: normal;
-    color: greydark;
+    color: grey;
   }
   & p {
     font-size: 16px;
@@ -180,7 +182,7 @@ export default {
     height: 45px;
     align-items: center;
     justify-content: center;
-    background-color: red;
+    background-color: rgb(206, 15, 45, 1);
     padding: 8px 20px;
     border-radius: 8px;
     color:#fff;
@@ -192,6 +194,7 @@ export default {
   font-size: 14px;
   line-height: 16.8px;
   white-space: nowrap;
+  display: inline-block;
   cursor: pointer;
 }
 </style>

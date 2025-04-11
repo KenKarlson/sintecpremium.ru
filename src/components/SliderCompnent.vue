@@ -211,6 +211,7 @@ export default {
   }
 
   &__subtitle {
+    margin-bottom: 20px;
     color: #828080;
   }
 

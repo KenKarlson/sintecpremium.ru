@@ -8,9 +8,17 @@
         <div class="info__wrapper__cards">
           <div class="info__wrapper__cards--top">
             <div class="card" v-for="card in cards" :key="card.id">
-              <img :src="card.icon" :alt="card.title" class="card__icon" />
-              <div class="card__number">{{ card.number }}</div>
-              <h3 class="card__title">{{ card.title }}</h3>
+              <div class="card__header">
+                <img
+                  :src="require(`@/assets/img/icons/${card.icon}`)"
+                  :alt="card.title"
+                  class="card__icon"
+                />
+                <div class="card__number">{{ card.number }}</div>
+              </div>
+              <div class="card__body">
+                <h3 class="card__title">{{ card.title }}</h3>
+              </div>
             </div>
           </div>
         </div>
@@ -26,10 +34,10 @@ export default {
     return {
       title: "Моторное масло SINTEC это -",
       cards: [
-        { id: 1, icon: "icon1.png", number: "01", title: "Text" },
-        { id: 2, icon: "icon2.png", number: "02", title: "Text" },
-        { id: 3, icon: "icon3.png", number: "03", title: "Text" },
-        { id: 4, icon: "icon4.png", number: "04", title: "Text" },
+        { id: 1, icon: "icon_01.png", number: "01", title: "Повышенная защита деталей двигателя" },
+        { id: 2, icon: "icon_02.png", number: "02", title: "Увеличенный запас эксплуатационных свойств" },
+        { id: 3, icon: "icon_03.png", number: "03", title: "Максимальная стойкость к окислению и угару" },
+        { id: 4, icon: "icon_04.png", number: "04", title: "Полное соответствие современным требованиям европейских автопроизводителей" },
       ],
       boxs: [
         {
@@ -71,12 +79,14 @@ export default {
       line-height: 1.2;
       text-transform: uppercase;
     }
-    &__cards{
+    &__cards {
       margin: 0;
       padding: 0;
-      &--top{
+      &--top {
+        //A?
         display: flex;
         align-items: flex-start;
+        justify-content: space-between;
         align-self: stretch;
         flex: 0 0 auto;
         gap: 15px; //Итак сайдет
@@ -94,5 +104,22 @@ export default {
   background-color: rgba(255, 255, 255, 1);
   border: none;
   border-radius: 16px;
+  &__header{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__number{
+    width: fit-content;
+    font-size: 22px;
+    font-weight: 500;
+    color: rgba(165,166,165,1);
+  }
+  &__title{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23.4px;//Ну примерно
+  }
 }
 </style>

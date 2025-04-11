@@ -38,11 +38,8 @@
               </div>
             </div>
 
-            <!-- <div class="cardbox__buttons">
-              <div class="btn btn_active" v-if="slide.text_btn_active && slide.text_btn_active.trim() !== ''">
-                {{ slide.text_btn_active }}
-              </div>
-              <div class="btn">{{ slide.text_btn }}</div>
+            <!-- <div class="cardbox__line__scrol">
+              JK kmm  добавить прокрутку тут гдето
             </div> -->
           </div>
         </swiper-slide>
@@ -119,7 +116,7 @@ export default {
         //  delay: 3000, // Автопрокрутка каждые 3 секунды
         //  disableOnInteraction: false,
         //},
-        spaceBetween: 10,
+        spaceBetween: 20,
         slidesPerView: "auto", // или число (например, 3)
         slidesOffsetBefore: 0, // убирает отступ в начале
         slidesOffsetAfter: 0, // убирает отступ в конце
@@ -173,6 +170,7 @@ export default {
 }
 
 .swiper-slide {
+  /*margin-right: 30px;*/
   padding-top: 40px;
   width: 427px !important; /* Фиксированная ширина */
   /* Или */
@@ -231,7 +229,7 @@ export default {
       font-family: Gotham Pro;
       font-size: 14px;
       line-height: 1.2;
-      border: 2px solid red;
+      border: 2px solid rgba(206, 15, 45, 1);;
       border-radius: 8px;
       text-align: center;
       cursor: pointer;
@@ -241,7 +239,7 @@ export default {
       }
 
       &_active {
-        background-color: red;
+        background-color: rgba(206, 15, 45, 1);;
         color: #eff1f3;
       }
     }

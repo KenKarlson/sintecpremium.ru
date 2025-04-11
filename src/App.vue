@@ -3,6 +3,7 @@
     <HeaderComponent />
     <FlagmanComponent />
     <TechComponent />
+    <InfoComponent />
     <ResultComponent/>
     <SliderCompnent />
     <FooterComponent />
@@ -16,6 +17,7 @@ import FlagmanComponent from "@/components/FlagmanComponent.vue";
 import TechComponent from "@/components/TechComponent.vue";
 import SliderCompnent from "@/components/SliderCompnent.vue";
 import ResultComponent from "@/components/ResultComponent.vue"
+import InfoComponent from "@/components/InfoComponent.vue"
 export default {
   name: "App",
   components: {
@@ -24,7 +26,8 @@ export default {
     FooterComponent,
     TechComponent,
     SliderCompnent,
-    ResultComponent
+    ResultComponent,
+    InfoComponent
   },
 };
 </script>

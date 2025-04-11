@@ -8,9 +8,9 @@
       <p class="flagman__description">
         В рецептурах используются исключительно современные импортные пакеты
         присадок и комплекс высококачественных, полностью синтетических базовых
-        масел — <span class="flagman__highlight">HC</span>,
-        <span class="flagman__highlight">PAO</span>,
-        <span class="flagman__highlight">AN</span>.
+        масел — <span class="flagman__highlight">HC, </span>
+        <span class="flagman__highlight">PAO, </span>
+        <span class="flagman__highlight">AN.</span>
       </p>
     </div>
   </section>

@@ -140,7 +140,7 @@ export default {
   height: 152px; //Это временно!!
   margin: 0;
   padding: 20px;
-  background-color: rgb(239, 241, 243, 1);
+  background-color: rgba(239, 241, 243, 1);
   border-radius: 10px;
   &-title {
     /*margin-bottom: 20px;*/
@@ -182,7 +182,7 @@ export default {
     height: 45px;
     align-items: center;
     justify-content: center;
-    background-color: rgb(206, 15, 45, 1);
+    background-color: rgba(206, 15, 45, 1);
     padding: 8px 20px;
     border-radius: 8px;
     color:#fff;

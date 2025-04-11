@@ -39,7 +39,7 @@
             </div>
 
             <!-- <div class="cardbox__line__scrol">
-              JK kmm  добавить прокрутку тут гдето
+              JK kmm pack? добавить прокрутку тут гдето!
             </div> -->
           </div>
         </swiper-slide>

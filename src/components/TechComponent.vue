@@ -1,11 +1,10 @@
-<!------>
 <template>
   <section class="tech">
     <div class="tech__backgrounds">
       <!-- Фоновые изображения -->
       <div class="tech__background tech__background--left">
         <img
-          src="@/assets/img/tech_bg.png"
+          src="@/assets/img/rec-176.png"
           alt="Технологии SINTEC"
           loading="lazy"
           class="tech__bg-image"
@@ -13,13 +12,7 @@
       </div>
       <div class="tech__background tech__background--right">
         <img
-          src="@/assets/img/dots.svg"
-          alt="Декоративные элементы"
-          loading="lazy"
-          class="tech__dots"
-        />
-        <img
-          src="@/assets/img/tech_light.png"
+          src="@/assets/img/rec-188.png"
           alt="Эффект свечения"
           loading="lazy"
           class="tech__light"
@@ -28,88 +21,188 @@
     </div>
 
     <div class="tech__content">
-      <!-- Левая колонка с текстом -->
-      <div
-        class="tech__column tech__column--left"
-        v-observe-visibility="{
-          callback: handleVisibility,
-          once: true,
-          throttle: 300,
-          intersection: {
-            threshold: 0.5,
-          },
-        }"
-      >
-        <div class="tech__header">
-          <div class="tech__subtitle">Масла SINTEC OW-XX</div>
-          <h2 class="tech__title">Разработаны по новейшим технологиям</h2>
+      <div class="left_content">
+        <h2 class="tech__title">Разработано по передовой технологии</h2>
+        <p>UltraSynth</p>
+        <div class="red_box">
+          <p class="ultrasynth">Усилено РАО и AN</p>
+          <p class="result">
+            Смотрите результаты лабораторных исследований oli.club
+          </p>
         </div>
-        <a href="#" class="tech__button"
-          >См. результаты лабораторных<br />исследований oil.club</a
-        >
       </div>
 
-      <!-- Центральное изображение -->
       <div class="tech__column tech__column--center">
-        <picture>
-          <source
-            media="(min-width: 768px)"
-            srcset="@/assets/img/tech_img.png"
-          />
-          <img
-            src="@/assets/img/tech_img_mob.png"
-            alt="Продукция SINTEC"
-            loading="lazy"
-            class="tech__product-image"
-          />
-        </picture>
         <img
-          src="@/assets/img/tech_sqare.png"
-          alt="Декоративный элемент"
-          loading="lazy"
-          class="tech__decor-square"
+          src="@/assets/img/sintec5w.png"
+          class="tech__product-image"
+          width="200px"
         />
       </div>
 
-      <!-- Правая колонка с преимуществами -->
-      <div
-        class="tech__column tech__column--right"
-        v-observe-visibility="{
-          callback: handleVisibility,
-          once: true,
-          throttle: 300,
-          intersection: {
-            threshold: 0.5,
-          },
-        }"
-      >
-        <div class="tech__feature">
-          <div class="tech__feature-icon">
-            <img
-              src="@/assets/img/tech_item_1.png"
-              alt="Высококачественная синтетическая база"
-              loading="lazy"
-            />
-          </div>
-          <div class="tech__feature-text">
-            Высококачественная<br />синтетическая база
-          </div>
+      <div class="right_content">
+        <div class="pao">
+          <img src="@/assets/img/icon_PAO.png" class="img_pao" />
+          <p class="property">
+            <span class="prop">полиальфаолефины</span> обеспечивают эффективную
+            работу при экстремальных температурах
+          </p>
         </div>
+        <div class="an">
+          <img src="@/assets/img/icon_AN.png" class="img_an" />
+          <p class="property">
+            <span class="prop">алкилированные нафталины</span> усиливают
+            действие противо — износных присадок, защищают от коррозии,
+            отложений и угара
+          </p>
+        </div>
+      </div>
+    </div>
 
-        <div class="tech__feature">
-          <div class="tech__feature-icon">
-            <img
-              src="@/assets/img/tech_item_2.png"
-              alt="Присадки от мировых лидеров"
-              loading="lazy"
-            />
-          </div>
-          <div class="tech__feature-text">Присадки<br />от мировых лидеров</div>
-        </div>
+    <div class="bottom">
+      <div class="left_bottom">
+        <img src="@/assets/img/Icon_car_shield.png" class="icon_car" />
+        <span class="car">Комплекс PAO + AN в моторных маслах</span>
+        <p class="icon">демонстрирует наилучшие характеристики</p>
+      </div>
+      <div class="img_bottom">
+        <img src="@/assets/img/graph.png" class="graph" />
+      </div>
+      <div class="right_bottom">
+        <img src="@/assets/img/Icon_clock.png" class="icon_clock" />
+        <p class="icon">эффективная работа на больших интервалах</p>
       </div>
     </div>
   </section>
 </template>
+
+<script>
+</script>
+
+<style lang="scss" scoped>
+.tech__backgrounds {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px;
+  width: 100vh;
+}
+
+.tech__background {
+  width: 100vh;
+}
+
+.tech__light {
+  width: 820px;
+  height: 500px;
+}
+
+.tech__bg-image {
+  width: 850px;
+  height: 500px;
+}
+
+.tech__content {
+  margin-top: -500px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 100px;
+  grid-row-gap: 0px;
+  margin-left: 150px;
+}
+
+.tech__product-image {
+  margin-top: 120px;
+}
+
+h2 {
+  font-family: "Gotham Pro";
+  text-transform: uppercase;
+  font-size: 45px;
+  font-weight: normal;
+  color: black;
+}
+
+.red_box p {
+  font-family: "Gotham Pro";
+  color: white;
+  font-weight: normal;
+  font-size: 12px;
+  background-color: #ce0f2d;
+  border: 3px solid #ce0f2d;
+  border-radius: 10px;
+}
+
+p {
+  font-family: "Gotham Pro";
+  font-size: 27px;
+  color: black;
+  font-weight: bold;
+}
+
+.ultrasynth {
+  width: 170px;
+  padding: 3px;
+}
+
+.result {
+  padding: 7px;
+  width: 270px;
+  margin-top: 100px;
+}
+
+.property {
+  font-family: "Gotham Pro";
+  font-weight: normal;
+  color: white;
+  margin-left: -150px;
+  font-size: 15px;
+}
+
+.prop {
+  font-size: 25px;
+}
+
+.an,
+.pao {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #a68459;
+  border: 2px solid #a68459;
+  border-radius: 50px;
+  padding: 5px;
+  width: 550px;
+}
+
+.pao {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.right_content {
+  margin-left: -200px;
+}
+
+.img_an,
+.img_pao {
+  width: 80px;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 18px;
+  margin-top: -950px;
+}
+
+.icon_clock,
+.icon_car {
+  margin-top: 50px;
+}
+.left_bottom {
+  margin-left: 50px;
+}
+</style>
 
 <script>
 export default {
@@ -123,190 +216,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.tech {
-  position: relative;
-  overflow: hidden;
-  padding: 80px 0;
-
-  &__backgrounds {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-  }
-
-  &__background {
-    position: absolute;
-    height: 100%;
-
-    &--left {
-      left: 0;
-      width: 40%;
-    }
-
-    &--right {
-      right: 0;
-      width: 60%;
-      display: flex;
-      justify-content: flex-end;
-    }
-  }
-
-  &__bg-image,
-  &__dots,
-  &__light,
-  &__decor-square {
-    position: absolute;
-    max-width: 100%;
-    height: auto;
-  }
-
-  &__content {
-    position: relative;
-    z-index: 1;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-  }
-
-  &__column {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-
-    &.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    &--left {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    &--center {
-      position: relative;
-      text-align: center;
-    }
-
-    &--right {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-  }
-
-  &__subtitle {
-    font-size: 18px;
-    color: #b89655; /* золотой цвет */
-    margin-bottom: 15px;
-    text-transform: uppercase;
-  }
-
-  &__title {
-    font-size: 32px;
-    line-height: 1.2;
-    color: #000;
-    margin: 0 0 30px 0;
-    font-weight: 700;
-  }
-
-  &__button {
-    display: inline-block;
-    padding: 15px 30px;
-    background: #0069ff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 500;
-    transition: background 0.3s ease;
-
-    &:hover {
-      background: darken(#0069ff, 10%);
-    }
-  }
-
-  &__product-image {
-    max-width: 100%;
-    height: auto;
-    position: relative;
-    z-index: 2;
-  }
-
-  &__decor-square {
-    position: absolute;
-    z-index: 1;
-    bottom: -20px;
-    right: -20px;
-  }
-
-  &__feature {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-
-  &__feature-icon {
-    flex-shrink: 0;
-    width: 60px;
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-  }
-
-  &__feature-text {
-    font-size: 18px;
-    line-height: 1.4;
-    color: #333;
-  }
-
-  @media (max-width: 1024px) {
-    &__content {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto auto;
-      gap: 60px;
-    }
-
-    &__column {
-      &--left,
-      &--right {
-        align-items: center;
-        text-align: center;
-      }
-
-      &--center {
-        order: -1;
-      }
-    }
-
-    &__button {
-      align-self: center;
-    }
-  }
-
-  @media (max-width: 768px) {
-    padding: 60px 0;
-
-    &__title {
-      font-size: 28px;
-    }
-
-    &__feature {
-      flex-direction: column;
-      text-align: center;
-    }
-  }
-}
-</style>

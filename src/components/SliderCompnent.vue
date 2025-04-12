@@ -116,7 +116,7 @@ export default {
         //  delay: 3000, // Автопрокрутка каждые 3 секунды
         //  disableOnInteraction: false,
         //},
-        spaceBetween: 20,
+        spaceBetween: 20, // 18px ??!!
         slidesPerView: "auto", // или число (например, 3)
         slidesOffsetBefore: 0, // убирает отступ в начале
         slidesOffsetAfter: 0, // убирает отступ в конце
@@ -230,7 +230,7 @@ export default {
       font-family: Gotham Pro;
       font-size: 14px;
       line-height: 1.2;
-      border: 2px solid rgba(206, 15, 45, 1);;
+      border: 2px solid rgba(206, 15, 45, 1);
       border-radius: 8px;
       text-align: center;
       cursor: pointer;
@@ -240,7 +240,7 @@ export default {
       }
 
       &_active {
-        background-color: rgba(206, 15, 45, 1);;
+        background-color: rgba(206, 15, 45, 1);
         color: #eff1f3;
       }
     }

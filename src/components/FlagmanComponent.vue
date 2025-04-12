@@ -56,7 +56,7 @@ export default {
     line-height: 1.3; /* 130% */
     letter-spacing: -0.02em; /* -2% */
     font-weight: 400; /* Regular */
-    color: #5a5a5a; /* grey_dark */
+    color: #5a5a5a; /* grey_dark */ /*перевести в перем*/
     max-width: 900px;
     margin: 0;
   }

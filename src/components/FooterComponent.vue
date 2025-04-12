@@ -3,7 +3,7 @@
     <div class="footer__container">
       <!-- Верхняя часть с кнопкой Ozon -->
       <div class="footer__top">
-        <h2 class="footer__ozon-title">купить на&nbsp;ozon прямо сейчас</h2>
+        <h2 class="footer__ozon-title">купить на ozon прямо сейчас</h2>
         <a
           href="https://www.ozon.ru/category/motornye-masla-8517/sintec-146249702/?saeviscos=68495%2C68496%2C68497&amp;seller=7780&amp;utm_content=undefined"
           target="_blank"
@@ -23,7 +23,7 @@
             >8&nbsp;800&nbsp;201-40-40</a
           >
           <span class="footer__phone-description"
-            >(24/7) | Бесплатный звонок по&nbsp;РФ</span
+            >(24/7) | Бесплатный звонок по РФ</span
           >
         </div>
 
@@ -229,7 +229,7 @@ export default {
     }
   }
 
-  /* Адаптация для очень маленьких экранов */
+  /* Адаптация для очень маленьких экранов, доделать в выхи! */
   @media (max-width: 375px) {
     &__ozon-title {
       font-size: 24px;
